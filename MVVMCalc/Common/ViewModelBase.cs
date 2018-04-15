@@ -5,7 +5,7 @@
     /// <summary>
     /// viewModelお基本クラス。INotifyPropertyChangedの実装を提供します。
     /// </summary>
-    public class ViewModelBaseL : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

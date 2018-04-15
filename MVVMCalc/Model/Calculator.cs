@@ -13,9 +13,7 @@ namespace MVVMCalc.Model
                     CalculateType.None, (x, y) =>
                     {
                         throw new InvalidOperationException();
-
                     }
-
                 },
                 {
                     CalculateType.Add,(x,y) =>x+y
@@ -31,6 +29,14 @@ namespace MVVMCalc.Model
                 }
             };
 
+        /// <summary> 
+        /// 渡された値の指定された計算結果を返す。 
+        /// opにCalculateType.Noneを渡すとInvalidOperationExceptionをスローします。 
+        /// </summary> 
+        /// <param name="x">左辺値</param> 
+        /// <param name="y">右辺値</param> 
+        /// <param name="op">計算方法</param> 
+        /// <returns>計算結果</returns> 
         public double Execute(double x, double y, CalculateType op)
         {
             return calcMap[op](x, y);
