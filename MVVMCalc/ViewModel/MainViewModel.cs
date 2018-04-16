@@ -5,7 +5,7 @@ using MVVMCalc.Model;
 
 namespace MVVMCalc.ViewModel
 {
-    public class MainViewModel:ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
         private double lhs;
         private double rhs;
@@ -44,10 +44,10 @@ namespace MVVMCalc.ViewModel
 
         public double Lhs
         {
-            get { return this.rhs; }
+            get { return this.lhs; }
             set
             {
-                this.rhs = value;
+                this.lhs = value;
                 this.RaisePropertyChanged("Lhs");
             }
         }
@@ -88,7 +88,7 @@ namespace MVVMCalc.ViewModel
             {
                 if (this.calculateCommand == null)
                 {
-                    this.calculateCommand = new DelegateCommand(CalculateExecute,CanCalculateExecute);
+                    this.calculateCommand = new DelegateCommand(CalculateExecute, CanCalculateExecute);
                 }
 
                 return this.calculateCommand;
